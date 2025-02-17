@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+
+.marco {
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.158);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.marquillo {
+    border: 4px solid black; 
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenerimagen{
+    width: 100%;  
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(20px, 20px);
+}
+
+img {
+    width: 100%;
+}
+
+
+
+
+#sobremi, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#experienciaLaboral {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+header h1 {
+    margin: 0;
+    color: black;
+}
+
+header h2 {
+    margin: 5px 0 20px;
+    color: gray;
+}
+
+#experienciaLaboral div {
+    margin-bottom: 20px;
+}
+
+#experienciaLaboral h4 {
+    margin: 0;
+    color: #474747;
+}
+
+#experienciaLaboral p {
+    margin: 5px 0;
+    color: grey;
+}
+
+#experienciaLaboral div div {
+    margin-left: 20px;
+}
+
+#experienciaLaboral tex, #experienciaLaboral li {
+    display: block;
+    color: #414141;
+    margin: 5px 0;
+}
+
+#educacion {
+    margin-top: 20px;
+}
+
+#educacion h4 {
+    margin: 0;
+    color: #474747;
+}
+
+#educacion p {
+    margin: 5px 0;
+    color: #414141;
+}
