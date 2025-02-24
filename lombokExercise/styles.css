@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background-color: red;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 30vh repeat(7, 100vh);
+    grid-template-areas:
+        "header"
+        "latest"
+        "divOne"
+        "divTwo"
+        "divThree"
+        "image"
+        "about"
+        "subscribe"
+        "footer"
+    ;
+}
