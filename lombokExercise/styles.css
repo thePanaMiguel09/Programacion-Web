@@ -6,24 +6,350 @@
 
 
 
-header {
-    background-color: red;
-}
-
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 30vh repeat(7, 100vh);
+    grid-template-rows: 100vh 30vh repeat(3, 100vh) 30vh repeat(3, 100vh);
     grid-template-areas:
         "header"
         "latest"
-        "divOne"
-        "divTwo"
-        "divThree"
+        "bestNootropic"
+        "bestEssentials"
+        "bestOild"
         "image"
         "about"
         "subscribe"
         "footer"
     ;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100vh 20vh repeat(2, 100vh) 80vh  40vh;
+        grid-template-areas:
+            "header header header"
+            "latest latest latest"
+            "bestNootropic bestEssentials bestOild"
+            "image about about"
+            "subscribe subscribe subscribe"
+            "footer footer footer"
+        ;
+    }
+
+    .imgSeparator {
+        grid-area: image;
+        width: 100%;
+        
+    }
+
+    header {
+        grid-area: header;
+        background-image: url(images/backImage.jpg);
+        background-size: cover;
+        margin: 10px;
+    }
+
+    .textLO{
+        opacity: 1 !important;
+        width: 50%;
+    }
+
+    .headSection {
+        opacity: 1 !important;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 50px;
+    }
+
+   .burger {
+    display: none;
+   }
+
+    .latest {
+        grid-area: latest;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bestEssentials {
+        grid-area: bestEssentials;
+        height: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+
+    }
+
+    .bestNootropic {
+        grid-area: bestNootropic;
+        height: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+
+    }
+
+
+    .bestOild {
+        grid-area: bestOild;
+        height: 90%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+
+    }
+
+    .about {
+        grid-area: about;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textAbout {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .subscribe {
+        grid-area: subscribe;
+    }
+
+    .inputEmail {
+        width: 50% !important;
+    }
+
+    .inputSub {
+        width: 25% !important; 
+    }
+
+    .containerLinks {
+        display: flex;
+        flex-direction: row !important;
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    .icons {
+        display: flex;
+        width: 50% !important;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between !important;
+        flex-direction: row-reverse !important;
+
+    }
+}
+
+
+header {
+    grid-area: header;
+    background-image: url(images/backImage.jpg);
+    background-size: cover;
+    margin: 10px;
+}
+
+
+.latest {
+    grid-area: latest;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bestNootropic {
+    grid-area: bestNootropic;
+    margin: 10px;
+}
+
+.containerColor {
+    background-color: #E2E8DF;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.textContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.bestEssentials {
+    grid-area: bestEssentials;
+    margin: 10px;
+}
+
+.bestOild {
+    grid-area: bestOild;
+    margin: 10px;
+}
+
+.imgSeparator {
+    grid-area: image;
+    background-image: url("images/imageSeparator.jpg");
+    background-size: cover;
+}
+
+.about {
+    grid-area: about;
+    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.subscribe {
+    grid-area: subscribe;
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribeText {
+    white-space: pre-line;
+    text-align: center;
+}
+
+
+
+.inputEmail {
+    width: 90%;
+    height: 10%;
+    background-color: whitesmoke;
+    border: solid white 2.5px;
+}
+
+.inputEmail::placeholder {
+    padding-left: 10px;
+}
+
+
+.inputSub {
+    width: 90%;
+    height: 10%;
+    background-color: transparent;
+    border: solid black 2.5px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.iconContainer {
+    border: solid;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #000e07;
+    color: white;
+    border: none;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.textLO{
+    opacity: 0; /* Invisible pero sigue ocupando espacio */
+    pointer-events: none;
+    
+}
+
+.headSection {
+    opacity: 0; /* Invisible pero sigue ocupando espacio */
+    pointer-events: none;
+}
+
+
+
+.text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    text-align: center;
+}
+
+
+.fontPrimary {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+
+}
+
+.fontSecondary {
+    font-family: 'Raleway', sans-serif;
+    font-size: xx-large;
+
+}
+
+.fontThearteary {
+    font-family: 'Lora', serif;
+    font-size: larger;
+    text-align: justify;
+    color: gray;
+
+}
+
+.fontLarge {
+    font-size: x-large;
+}
+
+
+.fontPrimaryColor {
+    color: #000e07;
+}
+
+.textAlign {
+    text-align: center;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.marignBotton {
+    margin-bottom: 20px;
 }
